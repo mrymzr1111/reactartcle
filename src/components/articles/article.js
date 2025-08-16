@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "./aticle.module.css";
 const Article = (props) => {
-    // console.log(props.articless);
+
     
     return (
         <div className={styled.articleWrapper} >
