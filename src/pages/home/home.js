@@ -38,10 +38,10 @@ setArticless(result.data.data)
     }, []);
     return (
         <div className={styled.homeWapper} >
-            <Navvbar title="مریم بلاگ"/>
+            <Navvbar title="Maryam Blog"/>
          <div className='container'>
            <h2 > 
-           مقالات جدید
+       New Article
            </h2>
        
      <div className={styled.articles}>
@@ -64,3 +64,7 @@ setArticless(result.data.data)
 }
 // http://localhost:8000/article
 export default Home;
+
+
+
+// pages/home/home.js

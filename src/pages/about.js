@@ -7,17 +7,18 @@ const About = () => {
         <div className={styled.about}>
             <Navvbar/>
             <div className='container'>
-        <h2>درباره ی ما</h2>
-       <p>
-صفحه درباره ما یا درباره شرکت مکان مناسبی برای معرفی مشتریان برگزیده خود و نظرات آنها در مورد شرکت و یا سایت شما است. از مشتریان خود بخواهید که نظر خود را در چند سطر کوتاه درباره شرکت شما و نحوه ارائه خدمات بنویسند و بخش ویژه ای در صفحه درباره ما به آن اختصاص دهید.
+        <h2>About Us</h2>
+     <p>
 
-همچنین با معرفی همکاران تجاری و مشتریان شناخته شده خود در صفحه درباره ما براحتی میتوانید اعتماد افراد جدید را کسب کنید. این نحوه معرفی شرکت زمانی ارزشمند است که کسب و کار شما از جنس B2B باشد، به عبارت دیگر مشتریان شما شرکت ها یا سازمان ها هستند.
+About Us
 
-سه نمونه از طراحی صفحه درباره ما
-۱. سایت شخصی
-سایت آقای Justin Delabar یک نمونه مناسب برای طراحی صفحه درباره ما را استفاده کرده است که مناسب سایت های شخصی مانند سایت طراحان گرافیکی یا وبلاگ نویسان است. کوتاه بودن متن، ارائه اطلاعات شخصی، استفاده از تصویر، قرار دادن لوگو همکاران و یک نمونه نقل قول درباره سایت از مشتریان در کنار هم ظاهر زیبا و کارآمدی به صفحه درباره ما بخشیده است.
+The "About Us" or "About the Company" page is a suitable place to introduce your selected customers and their opinions about your company or website. Ask your customers to write a short few lines about your company and how you provide services, and dedicate a special section on the About Us page to these testimonials.
 
-</p>
+Also, by introducing your business partners and well-known customers on the About Us page, you can easily earn the trust of new visitors. This type of company introduction is especially valuable if your business is B2B — in other words, your customers are companies or organizations.
+
+
+
+     </p>
 <img src=''/>
         </div>
        

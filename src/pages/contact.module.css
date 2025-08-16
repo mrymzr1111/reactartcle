@@ -1,0 +1,83 @@
+/* contact.module.css */
+.contactWrapper {
+    padding: 30px; 
+    background-color: #eaecec;
+    border-radius: 10px; 
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1); 
+    max-width: 500px; 
+    margin: 30px auto; 
+}
+
+.contactWrapper h1 {
+    font-size: 2rem; 
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.contactWrapper p {
+    font-size: 0.9rem; 
+    color: #666;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between form elements */
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Reduced gap */
+}
+
+.contactForm label {
+    font-size: 0.9rem; /* Smaller label font size */
+    color: #333;
+    font-weight: 500; /* Slightly lighter weight */
+}
+
+.contactForm input,
+.contactForm textarea {
+    padding: 10px 15px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller input font size */
+    border-radius: 6px; /* Smaller border radius */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.contactForm textarea {
+    resize: vertical;
+    min-height: 120px; /* Reduced height for textarea */
+}
+
+.submitButton {
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 1rem; /* Slightly smaller button font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Smaller border radius for button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px; /* Reduced top margin */
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.submitButton:active {
+    transform: scale(0.98);
+}
