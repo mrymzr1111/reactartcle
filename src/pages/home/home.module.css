@@ -1,5 +1,21 @@
-.homeWapper{
+/* .homeWapper2{
 
+}
+.homeWapper h2{
+    text-align: right;
+    padding-top: 60px;
+    font-size: 20px;
+}
+.articles{
+    display: flex;
+ margin-right: 10px;
+ justify-content: space-between;
+ flex-wrap: wrap;
+} 
+ */
+
+.homeWapper{
+display: grid;
 }
 .homeWapper h2{
     text-align: right;

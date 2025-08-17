@@ -1,154 +1,92 @@
 
-// import React from 'react';
-// import styled from './contact.module.css';
-// import Navvbar from '../components/navvbar';
+// export default function Contact() {
+//   const [result, setResult] = React.useState("");
 
-
-// const Contact = () => {
-
-//  const onSubmit = async (event) => {
-
+//   const onSubmit = async (event) => {
 //     event.preventDefault();
+//     setResult("Sending....");
 //     const formData = new FormData(event.target);
 
 //     formData.append("access_key", "fe2889a2-27f7-40d0-a279-a054b5b1030b");
 
-//     const object = Object.fromEntries(formData);
-//     const json = JSON.stringify(object);
-
-//     const res = await fetch("https://api.web3forms.com/submit", {
+//     const response = await fetch("https://api.web3forms.com/submit", {
 //       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json"
-//       },
-//       body: json
-//     }).then((res) => res.json());
+//       body: formData
+//     });
 
-//     if (res.success) {
-//       console.log("Success", res);
+//     const data = await response.json();
 
+//     if (data.success) {
+//       setResult("Form Submitted Successfully");
+//       event.target.reset();
+//     } else {
+//       console.log("Error", data);
+//       setResult(data.message);
 //     }
 //   };
 
-
-
-//     return (
+//   return (
+//     <div>
 //       <form onSubmit={onSubmit}>
-//          <Navvbar title="Maryam Blog"/>
-//         <div className='container'>
-           
-//             <div className={styled.contactWrapper}>
-//                 <h1>Contact Us</h1>
-//                 <p>If you have any questions or feedback, feel free to reach out to us!</p>
-//                 <form className={styled.contactForm}>
-//                     <div className={styled.formGroup}>
-//                         <label htmlFor="name">Your Name</label>
-//                         <input type="text" id="name" name='name' placeholder="Enter your name" required />
-//                     </div>
+//         <input type="text" name="name" required/>
+//         <input type="email" name="email" required/>
+//         <textarea name="message" required></textarea>
 
-//                     <div className={styled.formGroup}>
-//                         <label htmlFor="email">Your Email</label>
-//                         <input type="email" id="email" name='email' placeholder="Enter your email" required />
-//                     </div>
+//         <button type="submit">Submit Form</button>
 
-//                     <div className={styled.formGroup}>
-//                         <label htmlFor="message">Message</label>
-//                         <textarea id="message" name='message' placeholder="Write your message here" required></textarea>
-//                     </div>
+//       </form>
+//       <span>{result}</span>
 
-//                     <button type="submit" className={styled.submitButton}>Send Message</button>
-//                 </form>
-//             </div>
-//         </div>
-//         </form>
-//     );
-// };
+//     </div>
+//   );
+// }
 
-// export default Contact;
-import React from 'react';
-import styled from './contact.module.css';
+import React, { useState } from 'react';
 import Navvbar from '../components/navvbar';
-import { toast, ToastContainer } from 'react-toastify'; // Correct Import
-import 'react-toastify/dist/ReactToastify.css'; // Ensure this CSS is loaded
 
-const Contact = () => {
+export default function Contact() {
+  const [result, setResult] = useState("");
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-        const formData = new FormData(event.target);
+    formData.append("access_key", "fe2889a2-27f7-40d0-a279-a054b5b1030b");
 
-        formData.append("access_key", "fe2889a2-27f7-40d0-a279-a054b5b1030b");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+      const data = await response.json();
 
-        try {
-            const res = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: json
-            }).then((res) => res.json());
+      if (data.success) {
+        setResult("Message sent Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      console.error(err);
+      setResult("Network error. Please try again.");
+    }
+  };
 
-            if (res.success) {
-                console.log("Success", res);
-                // Use toast with a string position
-                toast.success('Your message has been sent successfully!', {
-                    position: 'top-right', // Direct string for position
-                    autoClose: 5000,
-                });
-            } else {
-                toast.error('Something went wrong. Please try again later.', {
-                    position: 'top-right',
-                    autoClose: 5000,
-                });
-            }
-        } catch (error) {
-            toast.error('Network Error. Please try again later.', {
-                position: 'top-right',
-                autoClose: 5000,
-            });
-            console.error("Error sending form data:", error);
-        }
-    };
-
-    return (
-        <>
-            <Navvbar title="Maryam Blog" />
-            <div className='container'>
-                <div className={styled.contactWrapper}>
-                    <h1>Contact Us</h1>
-                    <p>If you have any questions or feedback, feel free to reach out to us!</p>
-
-                    <form className={styled.contactForm} onSubmit={onSubmit}>
-                        <div className={styled.formGroup}>
-                            <label htmlFor="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required />
-                        </div>
-
-                        <div className={styled.formGroup}>
-                            <label htmlFor="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                        </div>
-
-                        <div className={styled.formGroup}>
-                            <label htmlFor="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-                        </div>
-
-                        <button type="submit" className={styled.submitButton}>Send Message</button>
-                    </form>
-                </div>
-            </div>
-
-            {/* Toastify Container for notifications */}
-            <ToastContainer />
-        </>
-    );
-};
-
-export default Contact;
+  return (
+    <>
+      <Navvbar />
+      <div className="min-h-screen flex items-center justify-center bg-black bg-opacity-90">
+        <form onSubmit={onSubmit} className="bg-white p-6 rounded shadow-md space-y-4 w-full max-w-md">
+          <input type="text" name="name" placeholder="Name" required className="w-full border rounded p-2" />
+          <input type="email" name="email" placeholder="Email" required className="w-full border rounded p-2" />
+          <textarea name="message" rows="4" placeholder="Message" required className="w-full border rounded p-2"></textarea>
+          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Submit Form</button>
+          <span className="text-center block text-gray-700 mt-2">{result}</span>
+        </form>
+      </div>
+    </>
+  );
+}

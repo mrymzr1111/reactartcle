@@ -1,25 +1,4 @@
-/* .articleWrapper{
-    width: 24%;
-    height:300px ;
-    background-color: rgb(255, 255, 255);
-  margin-bottom: 60px;
-  box-shadow: 1px 3px 5px 3px gainsboro;
-  
-}
-.articleWrapper img{
-    width: 100%;
-    height: auto;
-}
-.articleWrapper h3{
-text-align: right;
-padding: 0px 15px;
 
-}
-.articleWrapper p{
-    text-align: right;
-    padding:0px 15px ;
-    color: rgba(192, 185, 185, 0.979);
-} */
  /* Container for the articles */
 .articleContainer {
     display: flex;
