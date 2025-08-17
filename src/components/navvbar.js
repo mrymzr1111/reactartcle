@@ -35,6 +35,17 @@ const Navvbar = ({ title }) => {
               >
                 Contact Us
               </Link>
+
+
+
+            </li>
+            <li>
+                <Link
+                to="/addarticle"
+                className="hover:text-gray-900 transition-colors duration-200"
+              >
+                Dashboard
+              </Link>
             </li>
           </ul>
         </nav>
