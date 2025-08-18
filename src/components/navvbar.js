@@ -41,7 +41,7 @@ const Navvbar = ({ title }) => {
             </li>
             <li>
                 <Link
-                to="/addarticle"
+                to="/dashboard"
                 className="hover:text-gray-900 transition-colors duration-200"
               >
                 Dashboard

@@ -10,6 +10,7 @@ import Home from './pages/home/home';
  import { Route,Routes } from "react-router-dom";
 import './index.css';
 import AddArticle from './pages/dashboard/addarticle';
+import Dashboard from './pages/dashboard/dashboard';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 <Route path='/Contact' element={<Contact/>}/>
 <Route path='/article/:id' element={<Articlepage/>}/>
 
-<Route path='/addarticle' element={< AddArticle/>}/>
+<Route path='/dashboard' element={<  Dashboard/>}/>
 
 
 

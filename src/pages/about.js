@@ -1,30 +1,132 @@
 
+// import React from 'react';
+// import Navvbar from '../components/navvbar';
+// import Footer from '../components/footer/footer';
+
+// export default function About() {
+//   return (
+//     <div className=" min-h-screen flex flex-col bg-gray-50">
+//       <Navvbar />
+
+     
+//  <div className='pt-10  container'>
+//      <h2  className='p-4 text-4x1 text-gray-800 font-bold text-2xl '>About Us</h2>
+//    <p>
+
+// Contact Form Website with Interactive UI & API Integration
+
+// Overview:
+// Developed a modern, responsive contact form website using ReactJS and Tailwind CSS. Features include smooth animations, background blur effects, and real-time form validation. Integrated with Web3Forms API for secure, seamless form submissions.
+
+// Key Features:
+
+// Responsive design for desktop, tablet, and mobile
+
+// Custom contact form with live validation and error handling
+
+// Interactive UI with CSS animations and hover effects
+
+// Modern, clean aesthetic with intuitive layout
+
+// Technologies:
+// ReactJS, Tailwind CSS, CSS animations, Web3Forms API
+
+// Role:
+// Designed responsive layouts, implemented API integration, styled UI, added interactive features, and optimized validation.
+
+// Challenges:
+// Ensured real-time validation and error handling; optimized for mobile devices.
+
+// Why Choose Me:
+// Creative problem solver with strong ReactJS and API skills, focused on clean, functional, and visually appealing solutions.
+
+// Outcome:
+// Enhanced user engagement and positive feedback for a smooth, attractive, and functional contact form experience.
+
+
+//    </p>
+//    <div className='mt-0'> <img alt='pic' src='/pic/bbd.png'/></div>
+
+//        </div>
+    
+//     </div>
+//   );
+// }
 import React from 'react';
 import Navvbar from '../components/navvbar';
 import Footer from '../components/footer/footer';
 
 export default function About() {
   return (
-    <div className=" min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navvbar />
 
-     
- <div className='pt-10  container'>
-     <h2  className='p-7 text-4x1 text-gray-800 '>About Us</h2>
-   <p>
+      <div className="pt-10 container px-6 md:px-12">
+        <h2 className="p-4 text-4xl text-gray-800 font-bold text-center">About Us</h2>
 
- About Us
+        <section className="mt-8">
+          <h3 className="text-2xl font-semibold text-gray-700">Project Overview</h3>
+          <p className="mt-2 text-gray-600">
+            This project involved developing a modern, responsive contact form website using ReactJS and Tailwind CSS, with features such as smooth animations, background blur effects, and real-time form validation. Additionally, I integrated a CRUD (Create, Read, Update, Delete) system for managing articles using a RESTful API, which allows for seamless article management directly from the dashboard.
+          </p>
+        </section>
 
-The "About Us" or "About the Company" page is a suitable place to introduce your selected customers and their opinions about your company or website. Ask your customers to write a short few lines about your company and how you provide services, and dedicate a special section on the About Us page to these testimonials.
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">Key Features</h3>
+          <ul className="mt-2 list-disc pl-6 text-gray-600">
+            <li>Responsive design optimized for desktop, tablet, and mobile devices</li>
+            <li>Custom contact form with live validation and error handling</li>
+            <li>Interactive UI with CSS animations and hover effects</li>
+            <li>Modern, clean design with an intuitive layout</li>
+            <li>Full CRUD functionality for articles directly from the dashboard</li>
+          </ul>
+        </section>
 
- Also, by introducing your business partners and well-known customers on the About Us page, you can easily earn the trust of new visitors. This type of company introduction is especially valuable if your business is B2B — in other words, your customers are companies or organizations.
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">Technologies Used</h3>
+          <ul className="mt-2 list-disc pl-6 text-gray-600">
+            <li>ReactJS</li>
+            <li>Tailwind CSS</li>
+            <li>CSS Animations</li>
+            <li>Web3Forms API for form submissions</li>
+            <li>RESTful API for CRUD operations on articles</li>
+          </ul>
+        </section>
 
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">My Role</h3>
+          <p className="mt-2 text-gray-600">
+            I designed responsive layouts, implemented API integrations, and styled the user interface. Additionally, I developed the backend integration for CRUD operations on articles and ensured the smooth operation of all features, from form validation to managing articles via the dashboard.
+          </p>
+        </section>
 
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">Challenges Faced</h3>
+          <p className="mt-2 text-gray-600">
+            Ensuring real-time validation and error handling for the contact form was a challenge. For the CRUD functionality, I also had to ensure seamless synchronization between the frontend and backend, allowing admins to create, update, and delete articles with ease. Mobile optimization was another key area of focus.
+          </p>
+        </section>
 
-   </p>
- <img src=''/>
-       </div>
-    
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">Why Choose Me?</h3>
+          <p className="mt-2 text-gray-600">
+            I bring a strong blend of creativity and technical expertise, particularly in ReactJS and API integration. My focus is always on delivering user-friendly, functional, and visually appealing solutions, whether for dynamic forms or managing content like articles through seamless API interactions.
+          </p>
+        </section>
+
+        <section className="mt-6">
+          <h3 className="text-2xl font-semibold text-gray-700">Outcome</h3>
+          <p className="mt-2 text-gray-600">
+            The project resulted in a highly engaging and functional platform. The users enjoyed the interactive contact form, and the CRUD functionality for articles greatly improved content management efficiency. The smooth, user-friendly experience received positive feedback from both users and administrators.
+          </p>
+        </section>
+
+        <div className="mt-8 text-center">
+          <img alt="Project Screenshot" src="/pic/bbd.png" className="" />
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
