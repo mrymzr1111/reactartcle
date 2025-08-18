@@ -265,15 +265,16 @@
 /////////////////////
 import React, { useState } from "react";
 import Input from "../../components/input/input";
+import axios from "axios";
 
 export default function AddArticle({ setOpenModal }) {
   const [article, setArticle] = useState({
     title: "",
     duration: "",
     image: null,
-    content: "", // Add content field for the textarea
+    content: "", 
   });
-
+ const [successMessage, setSuccessMessage] = useState("");
   const handleOnchange = (e) => {
     const { name, value, files } = e.target;
     setArticle((prev) => ({
@@ -283,6 +284,7 @@ export default function AddArticle({ setOpenModal }) {
   };
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
     console.log("Article submitted:", article);
   };
@@ -290,6 +292,18 @@ export default function AddArticle({ setOpenModal }) {
   const handleCloseModal = () => {
     setOpenModal(false); // Close the modal when the close button is clicked
   };
+
+
+  const handleNewArticle=()=>{
+    axios.post("http://localhost:8000/articless",{
+       "id": 9,
+                "imageUrl": article.image,
+                "title":article.title,
+                "duration":article.duration
+    })
+    setSuccessMessage("Article added successfully!");
+  }
+
 
   return (
     <div className="bg-white p-10 rounded-xl shadow-lg w-full max-w-2xl space-y-6 relative">
@@ -337,6 +351,7 @@ export default function AddArticle({ setOpenModal }) {
         </div>
 
         <button
+        onClick={handleNewArticle}
           type="submit"
           className="w-full bg-gradient-to-r from-indigo-600 to-indigo-500 text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all"
         >

@@ -65,14 +65,18 @@ export default function About() {
         <h2 className="p-4 text-4xl text-gray-800 font-bold text-center">About Us</h2>
 
         <section className="mt-8">
-          <h3 className="text-2xl font-semibold text-gray-700">Project Overview</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-blink">
+            Project Overview
+          </h3>
           <p className="mt-2 text-gray-600">
             This project involved developing a modern, responsive contact form website using ReactJS and Tailwind CSS, with features such as smooth animations, background blur effects, and real-time form validation. Additionally, I integrated a CRUD (Create, Read, Update, Delete) system for managing articles using a RESTful API, which allows for seamless article management directly from the dashboard.
           </p>
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">Key Features</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500">
+            Key Features
+          </h3>
           <ul className="mt-2 list-disc pl-6 text-gray-600">
             <li>Responsive design optimized for desktop, tablet, and mobile devices</li>
             <li>Custom contact form with live validation and error handling</li>
@@ -83,7 +87,9 @@ export default function About() {
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">Technologies Used</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-600 to-teal-500">
+            Technologies Used
+          </h3>
           <ul className="mt-2 list-disc pl-6 text-gray-600">
             <li>ReactJS</li>
             <li>Tailwind CSS</li>
@@ -94,28 +100,36 @@ export default function About() {
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">My Role</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-600 to-purple-700">
+            My Role
+          </h3>
           <p className="mt-2 text-gray-600">
             I designed responsive layouts, implemented API integrations, and styled the user interface. Additionally, I developed the backend integration for CRUD operations on articles and ensured the smooth operation of all features, from form validation to managing articles via the dashboard.
           </p>
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">Challenges Faced</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+            Challenges Faced
+          </h3>
           <p className="mt-2 text-gray-600">
             Ensuring real-time validation and error handling for the contact form was a challenge. For the CRUD functionality, I also had to ensure seamless synchronization between the frontend and backend, allowing admins to create, update, and delete articles with ease. Mobile optimization was another key area of focus.
           </p>
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">Why Choose Me?</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-400 to-green-300">
+            Why Choose Me?
+          </h3>
           <p className="mt-2 text-gray-600">
             I bring a strong blend of creativity and technical expertise, particularly in ReactJS and API integration. My focus is always on delivering user-friendly, functional, and visually appealing solutions, whether for dynamic forms or managing content like articles through seamless API interactions.
           </p>
         </section>
 
         <section className="mt-6">
-          <h3 className="text-2xl font-semibold text-gray-700">Outcome</h3>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500">
+            Outcome
+          </h3>
           <p className="mt-2 text-gray-600">
             The project resulted in a highly engaging and functional platform. The users enjoyed the interactive contact form, and the CRUD functionality for articles greatly improved content management efficiency. The smooth, user-friendly experience received positive feedback from both users and administrators.
           </p>
