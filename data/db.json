@@ -1,12 +1,6 @@
 {
   "articless": [
     {
-      "id": "1",
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1683887034072-ce1d1c3bb2a2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "First Title",
-      "duration": "Duration: 20 minutes"
-    },
-    {
       "id": "2",
       "imageUrl": "https://plus.unsplash.com/premium_photo-1682787494765-44d02d12f5be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "title": "Second Title",
@@ -37,12 +31,6 @@
       "duration": "Duration: 20 minutes"
     },
     {
-      "id": "7",
-      "imageUrl": "https://images.unsplash.com/photo-1584697964358-3e14ca57658b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-      "title": "Seventh Title",
-      "duration": "Duration: 20 minutes"
-    },
-    {
       "id": "8",
       "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
       "title": "Eighth Title",
@@ -54,6 +42,5 @@
       "title": "nineth Title",
       "duration": "Duration: 20 minutes"
     }
-   
   ]
 }

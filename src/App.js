@@ -11,6 +11,7 @@ import Home from './pages/home/home';
 import './index.css';
 import AddArticle from './pages/dashboard/addarticle';
 import Dashboard from './pages/dashboard/dashboard';
+import UpdateArticle from './pages/dashboard/update';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
 <Route path='/dashboard' element={<  Dashboard/>}/>
 
-
+ <Route path="/update/:id" element={<UpdateArticle />} />
 
  </Routes>
   
