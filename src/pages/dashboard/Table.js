@@ -41,7 +41,7 @@ export default function Table({ setOpenModal }) {
       </div>
 
       <div className="pt-10 px-4 container mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">
           Articles Table
         </h2>
 

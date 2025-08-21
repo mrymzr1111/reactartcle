@@ -30,9 +30,9 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray">
       <Navvbar />
-      <div className="pt-6">
+      <div className="pt-6 bg-gray-900  ">
         {/* Table */}
         <Table setOpenModal={setOpenModal} />
 

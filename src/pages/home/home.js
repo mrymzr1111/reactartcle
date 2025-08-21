@@ -114,15 +114,62 @@
 // };
 
 // export default Home;
-import React, { useEffect, useState } from "react";
+// import React, { useContext, useEffect, useState } from "react";
+// import Navvbar from "../../components/navvbar";
+// import Article from "../../components/articles/article";
+// import axios from "axios";
+// import Footer from "../../components/footer/footer";
+// import { Link } from "react-router-dom";
+
+// const Home = () => {
+//   const [articless, setArticless] = useState([]);
+// const[toggleDarkMode, darkMode]=useContext();
+//   useEffect(() => {
+//     axios
+//       .get("http://localhost:8000/articless")
+//       .then((result) => setArticless(result.data))
+//       .catch((error) => console.log(error));
+//   }, []);
+
+//   return (
+//     <div className={`min-h-screen flex flex-col bg-gray-50 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-black"}`}>
+//       <Navvbar title="Maryam Blog" />
+
+//       <main className="flex-1 container mx-auto px-4 md:px-10 py-12">
+//         <h2 className=" pt-2 text-2xl md:text-4xl font-bold text-gray-600 mb-8 text-center md:text-left">
+//           New Articles
+//         </h2>
+
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {articless.map((article) => (
+//             <Link
+//               key={article.id}
+//               to={`/article/${article.id}`}
+//               className="block transform hover:scale-105 hover:shadow-2xl transition duration-300"
+//             >
+//               <Article articless={article} />
+//             </Link>
+//           ))}
+//         </div>
+//       </main>
+
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Home;
+import React, { useContext, useEffect, useState } from "react";
 import Navvbar from "../../components/navvbar";
 import Article from "../../components/articles/article";
 import axios from "axios";
 import Footer from "../../components/footer/footer";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../togglecontext/themeContext"; // Import ThemeContext
 
 const Home = () => {
   const [articless, setArticless] = useState([]);
+  const { darkMode } = useContext(ThemeContext); // Access darkMode state from ThemeContext
 
   useEffect(() => {
     axios
@@ -132,11 +179,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    
+    <div className="min-h-screen flex flex-col      ">
       <Navvbar title="Maryam Blog" />
-
+<div className={`${darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-black"}`}> 
       <main className="flex-1 container mx-auto px-4 md:px-10 py-12">
-        <h2 className=" pt-2 text-2xl md:text-4xl font-bold text-gray-600 mb-8 text-center md:text-left">
+        <h2 className="pt-2 text-2xl md:text-4xl font-bold text-gray-600 mb-8 text-center md:text-left">
           New Articles
         </h2>
 
@@ -154,6 +202,7 @@ const Home = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };
