@@ -35,7 +35,8 @@ export const ThemeProvider = ({ children }) => {
     setDarkMode((prev) => !prev);
   };
 
-  // Provide state and function to any components inside provider
+  // Provide state and function to any components 
+  
   return (
     <ThemeContext.Provider value={{ toggleDarkMode, darkMode }}>
       {children}

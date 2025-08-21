@@ -55,14 +55,22 @@
 import React from 'react';
 import Navvbar from '../components/navvbar';
 import Footer from '../components/footer/footer';
+import { useContext } from 'react';
+import { ThemeContext } from '../togglecontext/themeContext';
+import { text } from 'framer-motion/client';
 
 export default function About() {
+  const {darkMode}=useContext(ThemeContext)
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navvbar />
-
+<div className={`${darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-black"}`}> 
       <div className="pt-10 container px-6 md:px-12">
-        <h2 className="p-4 text-4xl text-gray-800 font-bold text-center">About Us</h2>
+        {/* <h2 className={`p-4 text-4xl font-bold text-center ${darkMode?text-gray-800: text-white} `}>About Us</h2> */}
+        <h2 className={`p-4 text-4xl font-bold text-center ${darkMode ? 'text-white': 'text-gray-800' }`}>
+  About Us
+</h2>
+
 
         <section className="mt-8">
           <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-blink">
@@ -141,6 +149,7 @@ export default function About() {
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 }

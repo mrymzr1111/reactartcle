@@ -1,13 +1,15 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Table from "../dashboard/Table";
 import AddArticle from "../dashboard/addarticle";
 import Navvbar from "../../components/navvbar";
+import { ThemeContext } from "../../togglecontext/themeContext";
 
 export default function Dashboard() {
   const [openModal, setOpenModal] = useState(false);  // setOpenModal 
   const [articles, setArticles] = useState([]);
+const{darkMode}=useContext(ThemeContext);
 
   useEffect(() => {
     axios.get("http://localhost:8000/articless")
@@ -32,7 +34,9 @@ export default function Dashboard() {
   return (
     <div className="bg-gray">
       <Navvbar />
-      <div className="pt-6 bg-gray-900  ">
+      {/* <div className={`pt-6 bg-gray-900 ${darkMode ? 'text-white': 'text-gray-800' } }`> */}
+      <div className={`pt-6 ${darkMode ? "bg-gray-900 text-black" : "bg-purple-50 text-black"} `}>
+
         {/* Table */}
         <Table setOpenModal={setOpenModal} />
 
