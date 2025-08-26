@@ -14,6 +14,7 @@ import Dashboard from './pages/dashboard/dashboard';
 import UpdateArticle from './pages/dashboard/update';
 import { useContext } from 'react';
 import { ThemeContext } from './togglecontext/themeContext';
+import Name from './pages/mm';
 
 
 
@@ -47,6 +48,8 @@ function App() {
 <Route path='/dashboard' element={<  Dashboard/>}/>
 
  <Route path="/update/:id" element={<UpdateArticle />} />
+  <Route path='/mm' element={< Name />} />
+ 
 
  </Routes>
   
