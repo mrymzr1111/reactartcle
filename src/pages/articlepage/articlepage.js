@@ -38,6 +38,64 @@
 //     </div>
 //   );
 // }
+// import { useParams } from "react-router-dom";
+// import Footer from "../../components/footer/footer";
+// import Navvbar from "../../components/navvbar";
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+
+// export default function Articlepage() {
+//   const { id } = useParams();
+//   const [article, setArticle] = useState(null);
+
+//   useEffect(() => {
+//     axios
+//       .get(`http://localhost:8000/articless/${id}`)
+//       .then((response) => {
+//         setArticle(response.data);
+//       })
+//       .catch((err) => console.log("Error fetching article:", err));
+//   }, [id]);
+
+//   if (!article) {
+//     return (
+//       <p className="text-center mt-20 text-gray-400 text-lg animate-pulse">
+//         Loading article...
+//       </p>
+//     );
+//   }
+
+//   return (
+//     <div className="min-h-screen flex flex-col bg-gray-50">
+//       <Navvbar />
+
+//       <main className="flex-1 container mx-auto px-4 md:px-10 py-12">
+//         <h1 className=" pt-1 text-4xl font-extrabold mb-10 text-gray-700 text-center md:text-left">
+//           {article.title}
+//         </h1>
+
+//         <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+//           <img
+//             src={article.imageUrl}
+//             alt={article.title}
+//             className="w-full h-96 object-cover"
+//           />
+
+//           <div className="p-8">
+//             <p className="text-gray-500 mb-4 text-sm md:text-base">
+//               Duration: {article.duration}
+//             </p>
+//             <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
+//               {article.content || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ligula nec justo cursus dapibus."}
+//             </p>
+//           </div>
+//         </div>
+//       </main>
+
+//       <Footer />
+//     </div>
+//   );
+// }
 import { useParams } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import Navvbar from "../../components/navvbar";
@@ -69,8 +127,8 @@ export default function Articlepage() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navvbar />
 
-      <main className="flex-1 container mx-auto px-4 md:px-10 py-12">
-        <h1 className=" pt-1 text-4xl font-extrabold mb-10 text-gray-700 text-center md:text-left">
+      <main className="flex-1 container mx-auto px-4 sm:px-6 md:px-10 py-8 md:py-12">
+        <h1 className="pt-1 text-3xl sm:text-4xl font-extrabold mb-8 sm:mb-10 text-gray-700 text-center md:text-left">
           {article.title}
         </h1>
 
@@ -78,15 +136,16 @@ export default function Articlepage() {
           <img
             src={article.imageUrl}
             alt={article.title}
-            className="w-full h-96 object-cover"
+            className="w-full h-64 sm:h-80 md:h-96 object-cover"
           />
 
-          <div className="p-8">
-            <p className="text-gray-500 mb-4 text-sm md:text-base">
+          <div className="p-6 sm:p-8">
+            <p className="text-gray-500 mb-3 text-sm sm:text-base">
               Duration: {article.duration}
             </p>
-            <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
-              {article.content || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ligula nec justo cursus dapibus."}
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl">
+              {article.content ||
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ligula nec justo cursus dapibus."}
             </p>
           </div>
         </div>
