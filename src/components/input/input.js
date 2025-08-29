@@ -50,7 +50,7 @@
 // components/input/Input.js
 export default function Input({ label, name, type = "text", placeholder, handleOnchange }) {
   return (
-    <div className="w-full max-w-lg space-y-2">
+    <div className="w-full  pt-0 max-w-lg space-x-0 space-y-0">
       <label className="block font-semibold">{label}</label>
       <input
         type={type}

@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import Navvbar from '../components/navvbar';
+import Footer from '../components/footer/footer';
 
 export default function Contact() {
   const [result, setResult] = useState("");
@@ -36,8 +37,8 @@ export default function Contact() {
   return (
     <>
       <Navvbar />
-      <div className="min-h-screen flex flex-col justify-start bg-gradient-to-r from-blue-500 to-teal-500 bg-opacity-90 backdrop-blur-lg">
-        {/* Upper Section: Form */}
+      <div className="min-h-screen p-2 flex flex-col justify-start bg-gradient-to-r from-blue-500 to-teal-500 bg-opacity-90 backdrop-blur-lg">
+        {/* Upper Section Form */}
         <div className="flex-grow flex justify-center items-start py-12">
           <form
             onSubmit={onSubmit}
@@ -78,7 +79,7 @@ export default function Contact() {
               aria-label="Message"
             />
 
-            {/* Submit Button with Hover Animation */}
+          
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300 transform hover:scale-105"
@@ -91,7 +92,7 @@ export default function Contact() {
           </form>
         </div>
 
-        {/* Lower Section: Image */}
+   
         <div className="flex justify-center items-center animate__animated animate__zoomIn animate__delay-2s py-12">
           <img
             src="/pic/contact.jpg"
@@ -99,6 +100,7 @@ export default function Contact() {
             className="w-full max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
           />
         </div>
+        <Footer/>
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import Table from "../dashboard/Table";
 import AddArticle from "../dashboard/addarticle";
 import Navvbar from "../../components/navvbar";
 import { ThemeContext } from "../../togglecontext/themeContext";
+import Footer from "../../components/footer/footer";
 
 export default function Dashboard() {
   const [openModal, setOpenModal] = useState(false);  // setOpenModal 
@@ -46,7 +47,9 @@ const{darkMode}=useContext(ThemeContext);
             <AddArticle setOpenModal={setOpenModal} />
           </div>
         )}
+         <Footer/>
       </div>
+     
     </div>
   );
 }

@@ -295,14 +295,14 @@ const Navvbar = ({ title }) => {
 
   return (
     <header
-      className={`shadow-md p-4 transition-colors duration-300 relative ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      className={`shadow-md p-1 py-7 transition-colors duration-300 relative ${
+        darkMode ? "bg-gradient-to-r from-blue-600 to-purple-700 text-white" : "bg-gradient-to-r from-blue-400 to-purple-500 text-white"
       }`}
     >
       {/* Hamburger button (top right for mobile) */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="flex flex-col p-1 justify-between w-6 h-6 absolute right-6 top-1 md:hidden focus:outline-none z-50 text-current"
+        className="flex flex-col p-1  justify-between w-6 h-6 absolute right-6 top-4 md:hidden focus:outline-none z-50 text-current"
         aria-label="Toggle menu"
         aria-controls="mobile-menu"
         aria-expanded={menuOpen}
@@ -327,7 +327,7 @@ const Navvbar = ({ title }) => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Title (left corner) */}
         <h1
-          className="md:text-2xl pr-9 text-lg font-bold absolute left-16 top-1/2 top-1 transform -translate-y-1/2"
+          className="md:text-2xl pr-9 text-lg font-bold absolute left-16 top-1/2 py-3 transform -translate-y-1/2"
         >
           {title}
         </h1>
@@ -354,7 +354,7 @@ const Navvbar = ({ title }) => {
           onClick={toggleDarkMode}
           aria-label="Toggle dark mode"
           aria-pressed={darkMode}
-          className={`items-center h-8 rounded-full w-14 transition-colors duration-300 absolute right-6 top-1/2 transform -translate-y-1/2 md:block hidden ${
+          className={`items-center h-8 rounded-full w-14 transition-colors duration-300 absolute right-6 top-1/2 justify-center transform -translate-y-1/2 md:block hidden ${
             darkMode ? "bg-gray-400" : "bg-gray-300"
           } cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-400`}
         >

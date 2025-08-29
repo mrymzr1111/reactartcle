@@ -18,7 +18,7 @@ import React from 'react';
 
 const Article = ({ articless }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white         rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
       <div className='w-full aspect-square '> <img 
         src={articless.imageUrl} 
         alt={articless.title} 

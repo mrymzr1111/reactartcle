@@ -113,15 +113,19 @@ export default function About() {
       <Navvbar />
 
       <main className="flex-grow container mx-auto px-6 sm:px-10 md:px-16 py-10">
-        <h2 className={`p-4 text-4xl font-bold text-center ${darkMode ? "text-white" : "text-black"}`}>
+        {/* <h2 className={`p-4 text-4xl font-bold text-center ${darkMode ? "text-white" : "text-black"}`}>
           About Us
-        </h2>
+        </h2> */}
+<h2 className={`p-4 text-2xl sm:text-3xl md:text-4xl font-bold text-center ${darkMode ? "text-white" : "text-black"}`}>
+  About Us
+</h2>
 
-        <section className="mt-8 max-w-4xl mx-auto">
+
+        <section className="mt-8  max-w-[65h]         mx-auto">
           <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-pulse">
             Project Overview
           </h3>
-          <p className="mt-2 text-gray-300 md:text-lg">
+          <p className="mt-2 text-gray-300 xs:text-xl break-before-avoid  sm:text-2xl md:3xl   text-[20px]   ">
             This project involved developing a modern, responsive contact form website using ReactJS and Tailwind CSS, with features such as smooth animations, background blur effects, and real-time form validation. Additionally, I integrated a CRUD (Create, Read, Update, Delete) system for managing articles using a RESTful API, which allows for seamless article management directly from the dashboard.
           </p>
         </section>

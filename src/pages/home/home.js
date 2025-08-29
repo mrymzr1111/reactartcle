@@ -143,30 +143,39 @@ const Home = () => {
       }`}
     >
       {/* Navbar */}
+      
       <Navvbar title="Maryam Blog" />
 
       {/* Hero Section */}
       <section
-        className={`w-full py-12 md:py-20 text-center transition-colors duration-300 ${
+        className={`w-full py-12     md:pr-20            md:py-20 text-center transition-colors duration-300 ${
           darkMode ? "bg-gray-800" : "bg-indigo-50"
         }`}
       >
-        <div className="container mx-auto px-6 md:px-12">
-          <h1
-            className={`text-3xl md:text-5xl font-bold mb-4 ${
+        <div className="container mx-auto px-4 py-17">
+          <div className="max-w-[800px ] m-t-[-96] w-full  mx-auto grid md:grid-cols-1">
+          {/* <h1
+            className={`flex flex-col   justify-center items-center  text-[20px] xs:text-3xl  sm:text-4xl xl:text-5xl font-bold mb-4  ${
               darkMode ? "text-white" : "text-indigo-900"
             }`}
           >
             Welcome to Maryam Blog
-          </h1>
+          </h1> */}<h1
+  className={`flex flex-col justify-center items-center text-[20px] xs:text-3xl sm:text-4xl xl:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-pink-500 to-purple-500 bg-clip-text text-transparent`}
+>
+  Welcome to Maryam Blog
+</h1>
+
+         
           <p
-            className={`max-w-2xl mx-auto text-lg md:text-xl ${
+            className={`max-w-2xl  mx-auto text-lg md:text-xl ${
               darkMode ? "text-gray-300" : "text-indigo-700"
             }`}
           >
             Discover the latest articles, insights, and stories curated for you.
           </p>
         </div>
+       </div>
       </section>
 
       {/* Main Content */}
